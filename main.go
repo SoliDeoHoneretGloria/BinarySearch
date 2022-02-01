@@ -23,7 +23,7 @@ func binSearch(target int, i ...int) int {
 	max := len(i)
 	mid := 0
 
-	for min <= max {
+	for min < max {
 		mid = int(math.Round(float64((min + max) / 2)))
 		if i[mid] == target {
 			return mid
