@@ -25,6 +25,9 @@ func binSearch(target int, i ...int) int {
 
 	for min = 0; min <= max; {
 		mid = int(math.Round(float64((min + max) / 2)))
+		if min > max {
+			return -1
+		}
 		if i[mid] == target {
 			break
 		} else if i[mid] < target {
